@@ -2,4 +2,9 @@
     <string name="app_name">Video Player Using ExoPlayer</string>
     <string name="all_videos">All Videos</string>
     <string name="all_folders">All Folders</string>
+
+    <string name="total_videos">Total Videos:</string>
+    <string name="total_folders">Total Folders:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

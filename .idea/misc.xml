@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Android/Project/VideoPlayerUsingExoPlayer/app/src/main/res/drawable/ic_vedio_player-icon_background.xml" value="0.18333333333333332" />
         <entry key="..\:/Android/Project/VideoPlayerUsingExoPlayer/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Android/Project/VideoPlayerUsingExoPlayer/app/src/main/res/layout/fragment_folders.xml" value="0.2" />
+        <entry key="..\:/Android/Project/VideoPlayerUsingExoPlayer/app/src/main/res/layout/fragment_videos.xml" value="0.2" />
         <entry key="..\:/Android/Project/VideoPlayerUsingExoPlayer/app/src/main/res/menu/bottom_nav.xml" value="0.2" />
       </map>
     </option>
