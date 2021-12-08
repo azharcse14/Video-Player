@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Video Player Using ExoPlayer</string>
+    <string name="all_videos">All Videos</string>
+    <string name="all_folders">All Folders</string>
+</resources>
