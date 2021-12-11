@@ -13,5 +13,6 @@
     <string name="sort_order">Short Order</string>
     <string name="about">About</string>
     <string name="exit">Exit</string>
-    
+    <string name="nav_text">Welcome to World of Entertainment!</string>
+
 </resources>
