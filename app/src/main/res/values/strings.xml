@@ -15,5 +15,6 @@
     <string name="exit">Exit</string>
     <string name="nav_text">Welcome to World of Entertainment!</string>
     <string name="video_name">Video Name</string>
+    <string name="folder_name">Folder Name</string>
 
 </resources>
