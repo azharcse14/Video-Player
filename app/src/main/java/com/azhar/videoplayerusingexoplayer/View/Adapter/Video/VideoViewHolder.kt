@@ -1,6 +1,5 @@
-package com.azhar.videoplayerusingexoplayer.Adapter
+package com.azhar.videoplayerusingexoplayer.View.Adapter.Video
 
-import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.azhar.videoplayerusingexoplayer.databinding.VideoViewChildBinding
 

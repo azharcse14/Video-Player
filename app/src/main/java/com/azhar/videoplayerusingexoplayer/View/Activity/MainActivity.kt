@@ -1,4 +1,4 @@
-package com.azhar.videoplayerusingexoplayer.Activity
+package com.azhar.videoplayerusingexoplayer.View.Activity
 
 import android.Manifest.permission.WRITE_EXTERNAL_STORAGE
 import android.annotation.SuppressLint
@@ -12,8 +12,8 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
-import com.azhar.videoplayerusingexoplayer.Fragment.FoldersFragment
-import com.azhar.videoplayerusingexoplayer.Fragment.VideosFragment
+import com.azhar.videoplayerusingexoplayer.View.Fragment.FoldersFragment
+import com.azhar.videoplayerusingexoplayer.View.Fragment.VideosFragment
 import com.azhar.videoplayerusingexoplayer.Model.Video
 import com.azhar.videoplayerusingexoplayer.R
 import com.azhar.videoplayerusingexoplayer.databinding.ActivityMainBinding

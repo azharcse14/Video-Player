@@ -1,4 +1,4 @@
-package com.azhar.videoplayerusingexoplayer.Fragment
+package com.azhar.videoplayerusingexoplayer.View.Fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
