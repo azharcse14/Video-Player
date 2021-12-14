@@ -5,7 +5,10 @@ import android.text.format.DateUtils
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
+import coil.transform.CircleCropTransformation
 import com.azhar.videoplayerusingexoplayer.Model.Video
+import com.azhar.videoplayerusingexoplayer.R
 import com.azhar.videoplayerusingexoplayer.databinding.VideoViewChildBinding
 
 class VideoAdapter(private val context: Context, private var videoList: ArrayList<Video>):
@@ -15,7 +18,11 @@ class VideoAdapter(private val context: Context, private var videoList: ArrayLis
     }
 
     override fun onBindViewHolder(holder: VideoViewHolder, position: Int) {
-//        holder.videoName.text =  videoList.get(position).title
+        holder.icon.load(videoList.get(position).artUri){
+            crossfade(true)
+            placeholder(R.mipmap.ic_video_player_icon)
+            transformations(CircleCropTransformation())
+        }
         holder.videoName.text =  videoList.get(position).title
         holder.folderName.text =  videoList.get(position).folderName
         holder.duration.text = DateUtils.formatElapsedTime(videoList.get(position).duration/1000)
