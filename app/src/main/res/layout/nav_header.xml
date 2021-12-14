@@ -12,7 +12,7 @@
         android:id="@+id/imageView"
         android:layout_width="95dp"
         android:layout_height="91dp"
-        android:src="@mipmap/ic_vedio_player_icon"
+        android:src="@mipmap/ic_video_player_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />

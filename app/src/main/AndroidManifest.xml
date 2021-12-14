@@ -9,9 +9,9 @@
     <application
         android:allowBackup="true"
         android:requestLegacyExternalStorage="true"
-        android:icon="@mipmap/ic_vedio_player_icon"
+        android:icon="@mipmap/ic_video_player_icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_vedio_player_icon_round"
+        android:roundIcon="@mipmap/ic_video_player_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VideoPlayerUsingExoPlayer">
         <activity
