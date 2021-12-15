@@ -1,5 +1,6 @@
 package com.azhar.videoplayerusingexoplayer.View.Fragment
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -15,6 +16,7 @@ import com.azhar.videoplayerusingexoplayer.databinding.FragmentVideosBinding
 class VideosFragment : Fragment() {
 
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,6 +28,7 @@ class VideosFragment : Fragment() {
         binding.videoRvId.setItemViewCacheSize(10)
         binding.videoRvId.layoutManager =  LinearLayoutManager(requireContext())
         binding.videoRvId.adapter = VideoAdapter(requireContext(), MainActivity.videoList)
+        binding.totalVideosTvId.text = "Total Videos: ${MainActivity.videoList.size}"
 
         return view
     }

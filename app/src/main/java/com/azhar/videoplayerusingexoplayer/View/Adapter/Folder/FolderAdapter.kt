@@ -30,4 +30,6 @@ class FolderAdapter(private val context: Context, private var folderList: ArrayL
     override fun getItemCount(): Int {
         return folderList.size
     }
+
+
 }

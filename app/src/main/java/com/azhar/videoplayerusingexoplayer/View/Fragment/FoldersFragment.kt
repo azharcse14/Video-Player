@@ -1,5 +1,6 @@
 package com.azhar.videoplayerusingexoplayer.View.Fragment
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -15,6 +16,7 @@ import com.azhar.videoplayerusingexoplayer.databinding.FragmentFoldersBinding
 class FoldersFragment : Fragment() {
 
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,6 +28,7 @@ class FoldersFragment : Fragment() {
         binding.folderRvId.setItemViewCacheSize(10)
         binding.folderRvId.layoutManager =  LinearLayoutManager(requireContext())
         binding.folderRvId.adapter = FolderAdapter(requireContext(), MainActivity.folderList)
+        binding.totalFoldersId.text = "Total Folders: ${MainActivity.folderList.size}"
 
         return view
     }
