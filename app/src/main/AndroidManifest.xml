@@ -3,19 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.azhar.videoplayerusingexoplayer">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
 
     <application
         android:allowBackup="true"
-        android:requestLegacyExternalStorage="true"
         android:icon="@mipmap/ic_video_player_icon"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_video_player_icon_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VideoPlayerUsingExoPlayer">
         <activity
-            android:name="com.azhar.videoplayerusingexoplayer.View.Activity.MainActivity"
+            android:name=".View.Activity.FoldersActivity"
+            android:exported="true" />
+        <activity
+            android:name=".View.Activity.MainActivity"
             android:exported="true"
             android:screenOrientation="locked">
             <intent-filter>

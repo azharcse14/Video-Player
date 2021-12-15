@@ -7,7 +7,7 @@ import com.azhar.videoplayerusingexoplayer.databinding.FolderViewChildBinding
 class FolderViewHolder(binding: FolderViewChildBinding): RecyclerView.ViewHolder(
     binding.root
 ) {
-    val icon = binding.iconIdFv
     val folderName = binding.folderNameIdFv
+    val root = binding.root
 
 }
