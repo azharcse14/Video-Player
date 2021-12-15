@@ -17,7 +17,9 @@
         android:theme="@style/Theme.VideoPlayerUsingExoPlayer">
         <activity
             android:name=".View.Activity.FoldersActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".View.Activity.MainActivity"
             android:exported="true"
