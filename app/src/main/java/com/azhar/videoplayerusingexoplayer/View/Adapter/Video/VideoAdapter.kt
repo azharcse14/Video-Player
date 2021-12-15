@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.transform.CircleCropTransformation
+import com.azhar.videoplayerusingexoplayer.Model.Folder
 import com.azhar.videoplayerusingexoplayer.Model.Video
 import com.azhar.videoplayerusingexoplayer.R
-import com.azhar.videoplayerusingexoplayer.View.Adapter.Video.VideoViewHolder
 import com.azhar.videoplayerusingexoplayer.databinding.VideoViewChildBinding
 
 class VideoAdapter(private val context: Context, private var videoList: ArrayList<Video>):

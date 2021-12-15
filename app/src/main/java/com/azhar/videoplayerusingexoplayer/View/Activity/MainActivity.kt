@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
+import com.azhar.videoplayerusingexoplayer.Model.Folder
 import com.azhar.videoplayerusingexoplayer.View.Fragment.FoldersFragment
 import com.azhar.videoplayerusingexoplayer.View.Fragment.VideosFragment
 import com.azhar.videoplayerusingexoplayer.Model.Video
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     companion object{
         lateinit var videoList: ArrayList<Video>
+        lateinit var folderList: ArrayList<Folder>
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         if (requestRunTimePermission()){
+            folderList = ArrayList()
             videoList = getAllVideos()
             setFragment(VideosFragment())
         }
@@ -106,11 +109,12 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("InlinedApi", "Recycle", "Range")
     private fun getAllVideos():ArrayList<Video>{
         val tempList = ArrayList<Video>()
+        val tempFolderList = ArrayList<String>()
 
         val projection = arrayOf(MediaStore.Video.Media.TITLE, MediaStore.Video.Media.SIZE,
                                 MediaStore.Video.Media._ID, MediaStore.Video.Media.BUCKET_DISPLAY_NAME,
                                 MediaStore.Video.Media.DATA, MediaStore.Video.Media.DATE_ADDED,
-                                MediaStore.Video.Media.DURATION
+                                MediaStore.Video.Media.DURATION, MediaStore.Video.Media.BUCKET_ID
         )
 
         val cursor = this.contentResolver.query(MediaStore.Video.Media.EXTERNAL_CONTENT_URI,
@@ -125,6 +129,7 @@ class MainActivity : AppCompatActivity() {
                     val titleC = cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media.TITLE))
                     val idC = cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media._ID))
                     val folderC = cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media.BUCKET_DISPLAY_NAME))
+                    val folderIdC = cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media.BUCKET_ID))
                     val sizeC = cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media.SIZE))
                     val pathC = cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media.DATA))
                     val durationC = cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media.DURATION)).toLong()
@@ -137,6 +142,11 @@ class MainActivity : AppCompatActivity() {
                         )
                         if (file.exists()){
                             tempList.add(video)
+                        }
+
+                        if (!tempFolderList.contains(folderC)){
+                            tempFolderList.add(folderC)
+                            folderList.add(Folder(id = folderIdC, folderName = folderC))
                         }
 
                     }catch (e:Exception){}
