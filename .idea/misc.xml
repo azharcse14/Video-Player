@@ -16,6 +16,7 @@
         <entry key="..\:/Android/Project/VideoPlayerUsingExoPlayer/app/src/main/res/menu/drawer_nav.xml" value="0.1" />
         <entry key="..\:/Android/Project/VideoPlayerUsingExoPlayer/app/src/main/res/mipmap-anydpi-v26/ic_video_player_icon.xml" value="0.2128205128205128" />
         <entry key="app/src/main/res/layout/activity_folder.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_player.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_videos.xml" value="0.17119565217391305" />
       </map>
     </option>

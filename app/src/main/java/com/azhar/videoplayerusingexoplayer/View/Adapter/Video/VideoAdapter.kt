@@ -1,15 +1,18 @@
 package com.azhar.videoplayerusingexoplayer.View.Adapter.Video
 
 import android.content.Context
+import android.content.Intent
 import android.text.format.DateUtils
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import coil.transform.CircleCropTransformation
 import com.azhar.videoplayerusingexoplayer.Model.Folder
 import com.azhar.videoplayerusingexoplayer.Model.Video
 import com.azhar.videoplayerusingexoplayer.R
+import com.azhar.videoplayerusingexoplayer.View.Activity.PlayerActivity
 import com.azhar.videoplayerusingexoplayer.databinding.VideoViewChildBinding
 
 class VideoAdapter(private val context: Context, private var videoList: ArrayList<Video>):
@@ -27,7 +30,10 @@ class VideoAdapter(private val context: Context, private var videoList: ArrayLis
         holder.videoName.text =  videoList.get(position).title
         holder.folderName.text =  videoList.get(position).folderName
         holder.duration.text = DateUtils.formatElapsedTime(videoList.get(position).duration/1000)
-
+        holder.root.setOnClickListener{
+            val intent =  Intent(context, PlayerActivity::class.java)
+            ContextCompat.startActivity(context, intent, null)
+        }
     }
 
     override fun getItemCount(): Int {

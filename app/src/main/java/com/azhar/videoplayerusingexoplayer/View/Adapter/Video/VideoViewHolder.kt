@@ -10,4 +10,5 @@ class VideoViewHolder(binding: VideoViewChildBinding): RecyclerView.ViewHolder(
     val videoName = binding.videoNameId
     val folderName = binding.folderNameId
     val duration = binding.durationId
+    val root = binding.root
 }
